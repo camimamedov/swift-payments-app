@@ -97,7 +97,7 @@ enum TabItems: Int, CaseIterable
 }
 
 extension PaymentsTabView{
-    func CustomTabItem(item: TabItems, isActive: Bool, isCenter: Bool) -> some View{
+    private func CustomTabItem(item: TabItems, isActive: Bool, isCenter: Bool) -> some View{
         VStack{
             
             ZStack{

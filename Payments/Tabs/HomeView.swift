@@ -8,15 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var viewModel = HomeViewModel()
+    
     var body: some View {
         ZStack{
             Color(UIColor.systemBackground)
                 .ignoresSafeArea()
-            VStack{
-                Text("HomeView")
-                    .frame(height: 1000)
-                    .background(Color.red)
+            
+            NavigationView{
+                Text("Home View")
+                
+                if($viewModel.userData != nil){
+                    Text($viewModel.userData.wrappedValue.)
+                }
             }
+            .task {
+                viewModel.getUserData()
+            }
+            .navigationTitle("Home")
         }
     }
 }
