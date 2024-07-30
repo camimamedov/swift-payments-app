@@ -17,11 +17,9 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             NavigationView{
-                Text("Home View")
-                
-                if($viewModel.userData != nil){
-                    Text($viewModel.userData.wrappedValue.)
-                }
+                RoundedRectangle(cornerSize: CGSize(width: 20, height: 20), style: .continuous)
+                    .fill(PColor.primary.color)
+                    .frame(width: 283, height: 176)
             }
             .task {
                 viewModel.getUserData()

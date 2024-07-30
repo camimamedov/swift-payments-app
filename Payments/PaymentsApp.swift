@@ -26,7 +26,7 @@ struct PaymentsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            PaymentsTabView()
+            PTabView()
         }
     }
 }

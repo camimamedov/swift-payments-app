@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4353ED592C5819C700CFB772 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353ED582C5819C700CFB772 /* LoadingView.swift */; };
+		4357ED182C220C6F006F8050 /* PColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357ED172C220C6F006F8050 /* PColor.swift */; };
 		43A67C362BFBDB0E000DC15A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A67C352BFBDB0E000DC15A /* NetworkManager.swift */; };
 		43A67C382BFBDE77000DC15A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A67C372BFBDE77000DC15A /* NetworkError.swift */; };
 		43A67C3A2BFBE168000DC15A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A67C392BFBE168000DC15A /* HomeViewModel.swift */; };
 		43E1DFAD2BFA09CF002E01C1 /* PaymentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DFAC2BFA09CF002E01C1 /* PaymentsApp.swift */; };
-		43E1DFAF2BFA09CF002E01C1 /* PaymentsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DFAE2BFA09CF002E01C1 /* PaymentsTabView.swift */; };
+		43E1DFAF2BFA09CF002E01C1 /* PTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DFAE2BFA09CF002E01C1 /* PTabView.swift */; };
 		43E1DFB12BFA09D0002E01C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1DFB02BFA09D0002E01C1 /* Assets.xcassets */; };
 		43E1DFB42BFA09D0002E01C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1DFB32BFA09D0002E01C1 /* Preview Assets.xcassets */; };
 		43E1DFBB2BFA0AC7002E01C1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DFBA2BFA0AC7002E01C1 /* HomeView.swift */; };
@@ -22,12 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4353ED582C5819C700CFB772 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4357ED172C220C6F006F8050 /* PColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PColor.swift; sourceTree = "<group>"; };
 		43A67C352BFBDB0E000DC15A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		43A67C372BFBDE77000DC15A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		43A67C392BFBE168000DC15A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		43E1DFA92BFA09CF002E01C1 /* Payments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E1DFAC2BFA09CF002E01C1 /* PaymentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsApp.swift; sourceTree = "<group>"; };
-		43E1DFAE2BFA09CF002E01C1 /* PaymentsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTabView.swift; sourceTree = "<group>"; };
+		43E1DFAE2BFA09CF002E01C1 /* PTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTabView.swift; sourceTree = "<group>"; };
 		43E1DFB02BFA09D0002E01C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43E1DFB32BFA09D0002E01C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43E1DFBA2BFA0AC7002E01C1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -48,6 +52,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4353ED572C58199E00CFB772 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4353ED582C5819C700CFB772 /* LoadingView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4357ED162C220C5F006F8050 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4357ED172C220C6F006F8050 /* PColor.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		43A67C342BFBDAFC000DC15A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +95,10 @@
 		43E1DFAB2BFA09CF002E01C1 /* Payments */ = {
 			isa = PBXGroup;
 			children = (
+				4357ED162C220C5F006F8050 /* Utilities */,
 				43A67C342BFBDAFC000DC15A /* Managers */,
 				43E1DFBC2BFA0AE8002E01C1 /* Tabs */,
+				4353ED572C58199E00CFB772 /* Screens */,
 				43E1DFAC2BFA09CF002E01C1 /* PaymentsApp.swift */,
 				43A67C372BFBDE77000DC15A /* NetworkError.swift */,
 				43E1DFB02BFA09D0002E01C1 /* Assets.xcassets */,
@@ -96,7 +118,7 @@
 		43E1DFBC2BFA0AE8002E01C1 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				43E1DFAE2BFA09CF002E01C1 /* PaymentsTabView.swift */,
+				43E1DFAE2BFA09CF002E01C1 /* PTabView.swift */,
 				43E1DFBA2BFA0AC7002E01C1 /* HomeView.swift */,
 				43A67C392BFBE168000DC15A /* HomeViewModel.swift */,
 				43E1DFBD2BFA0B0A002E01C1 /* StatisticsView.swift */,
@@ -181,11 +203,13 @@
 				43E1DFBB2BFA0AC7002E01C1 /* HomeView.swift in Sources */,
 				43E1DFBE2BFA0B0A002E01C1 /* StatisticsView.swift in Sources */,
 				43A67C3A2BFBE168000DC15A /* HomeViewModel.swift in Sources */,
-				43E1DFAF2BFA09CF002E01C1 /* PaymentsTabView.swift in Sources */,
+				43E1DFAF2BFA09CF002E01C1 /* PTabView.swift in Sources */,
+				4353ED592C5819C700CFB772 /* LoadingView.swift in Sources */,
 				43A67C362BFBDB0E000DC15A /* NetworkManager.swift in Sources */,
 				43E1DFC02BFA0B15002E01C1 /* PaymentView.swift in Sources */,
 				43A67C382BFBDE77000DC15A /* NetworkError.swift in Sources */,
 				43E1DFC42BFA0B36002E01C1 /* ProfileView.swift in Sources */,
+				4357ED182C220C6F006F8050 /* PColor.swift in Sources */,
 				43E1DFAD2BFA09CF002E01C1 /* PaymentsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

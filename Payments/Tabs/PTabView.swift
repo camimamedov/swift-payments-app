@@ -15,7 +15,7 @@
 
 import SwiftUI
 
-struct PaymentsTabView: View {
+struct PTabView: View {
     
     @State var selectedTab = 0
     
@@ -54,7 +54,7 @@ struct PaymentsTabView: View {
 }
 
 #Preview {
-    PaymentsTabView()
+    PTabView()
 }
 
 enum TabItems: Int, CaseIterable
@@ -96,17 +96,17 @@ enum TabItems: Int, CaseIterable
     }
 }
 
-extension PaymentsTabView{
+extension PTabView{
     private func CustomTabItem(item: TabItems, isActive: Bool, isCenter: Bool) -> some View{
         VStack{
             
             ZStack{
                 if isCenter{
                     Circle()
-                        .foregroundStyle(Color("MainColor").opacity(0.2))
+                        .foregroundStyle(PColor.primary.color.opacity(0.2))
                         .frame(width: 65)
                     Circle()
-                        .foregroundStyle(Color("MainColor"))
+                        .foregroundStyle(PColor.primary.color)
                         .frame(width: 55)
                     
                     Image(systemName: item.iconName)
@@ -120,14 +120,14 @@ extension PaymentsTabView{
                     Image(systemName: item.iconName)
                         .resizable()
                         .renderingMode(.template)
-                        .foregroundColor(isActive ? Color("MainColor") : .gray)
+                        .foregroundColor(isActive ? PColor.primary.color : .gray)
                         .scaledToFit()
                         .frame(width: isCenter ? 29 : 25, height: isCenter ? 29 : 25)
                 }
             }
             Text(item.title)
                 .font(.system(size: 12))
-                .foregroundColor(isActive ? Color("MainColor") : .gray)
+                .foregroundColor(isActive ? PColor.primary.color : .gray)
         }
     }
 }
