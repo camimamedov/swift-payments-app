@@ -17,9 +17,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             NavigationView{
-                RoundedRectangle(cornerSize: CGSize(width: 20, height: 20), style: .continuous)
-                    .fill(PColor.primary.color)
-                    .frame(width: 283, height: 176)
+                PCardView()
             }
             .task {
                 viewModel.getUserData()
@@ -32,3 +30,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+

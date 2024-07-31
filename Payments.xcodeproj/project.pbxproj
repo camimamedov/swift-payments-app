@@ -21,6 +21,10 @@
 		43E1DFC02BFA0B15002E01C1 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DFBF2BFA0B15002E01C1 /* PaymentView.swift */; };
 		43E1DFC22BFA0B26002E01C1 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DFC12BFA0B26002E01C1 /* CardsView.swift */; };
 		43E1DFC42BFA0B36002E01C1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1DFC32BFA0B36002E01C1 /* ProfileView.swift */; };
+		43F9C2AA2C59644C00CAAF16 /* PCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F9C2A92C59644C00CAAF16 /* PCardView.swift */; };
+		43F9C2AE2C59726500CAAF16 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43F9C2AD2C59726500CAAF16 /* Mulish-Bold.ttf */; };
+		43F9C2B02C59727100CAAF16 /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43F9C2AF2C59727100CAAF16 /* Mulish-SemiBold.ttf */; };
+		43F9C2B32C5973B000CAAF16 /* PFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F9C2B22C5973B000CAAF16 /* PFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,11 @@
 		43E1DFBF2BFA0B15002E01C1 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		43E1DFC12BFA0B26002E01C1 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		43E1DFC32BFA0B36002E01C1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		43F9C2A92C59644C00CAAF16 /* PCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCardView.swift; sourceTree = "<group>"; };
+		43F9C2AD2C59726500CAAF16 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
+		43F9C2AF2C59727100CAAF16 /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
+		43F9C2B12C5972D100CAAF16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		43F9C2B22C5973B000CAAF16 /* PFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				4357ED172C220C6F006F8050 /* PColor.swift */,
+				43F9C2B22C5973B000CAAF16 /* PFont.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -95,6 +105,9 @@
 		43E1DFAB2BFA09CF002E01C1 /* Payments */ = {
 			isa = PBXGroup;
 			children = (
+				43F9C2B12C5972D100CAAF16 /* Info.plist */,
+				43F9C2AB2C5971FF00CAAF16 /* Fonts */,
+				43F9C2A82C59640900CAAF16 /* Views */,
 				4357ED162C220C5F006F8050 /* Utilities */,
 				43A67C342BFBDAFC000DC15A /* Managers */,
 				43E1DFBC2BFA0AE8002E01C1 /* Tabs */,
@@ -127,6 +140,31 @@
 				43E1DFC32BFA0B36002E01C1 /* ProfileView.swift */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		43F9C2A82C59640900CAAF16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43F9C2A92C59644C00CAAF16 /* PCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43F9C2AB2C5971FF00CAAF16 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				43F9C2AC2C59721200CAAF16 /* Mulish */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		43F9C2AC2C59721200CAAF16 /* Mulish */ = {
+			isa = PBXGroup;
+			children = (
+				43F9C2AF2C59727100CAAF16 /* Mulish-SemiBold.ttf */,
+				43F9C2AD2C59726500CAAF16 /* Mulish-Bold.ttf */,
+			);
+			path = Mulish;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +225,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F9C2AE2C59726500CAAF16 /* Mulish-Bold.ttf in Resources */,
+				43F9C2B02C59727100CAAF16 /* Mulish-SemiBold.ttf in Resources */,
 				43E1DFB42BFA09D0002E01C1 /* Preview Assets.xcassets in Resources */,
 				43E1DFB12BFA09D0002E01C1 /* Assets.xcassets in Resources */,
 			);
@@ -208,9 +248,11 @@
 				43A67C362BFBDB0E000DC15A /* NetworkManager.swift in Sources */,
 				43E1DFC02BFA0B15002E01C1 /* PaymentView.swift in Sources */,
 				43A67C382BFBDE77000DC15A /* NetworkError.swift in Sources */,
+				43F9C2B32C5973B000CAAF16 /* PFont.swift in Sources */,
 				43E1DFC42BFA0B36002E01C1 /* ProfileView.swift in Sources */,
 				4357ED182C220C6F006F8050 /* PColor.swift in Sources */,
 				43E1DFAD2BFA09CF002E01C1 /* PaymentsApp.swift in Sources */,
+				43F9C2AA2C59644C00CAAF16 /* PCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +388,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Payments/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Payments/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -374,6 +417,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Payments/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Payments/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

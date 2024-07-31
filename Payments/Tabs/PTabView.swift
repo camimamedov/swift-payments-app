@@ -33,7 +33,6 @@ struct PTabView: View {
                 ProfileView()
                     .tag(4)
             }
-            
             VStack{
                 Spacer()
                 HStack (alignment: .bottom) {

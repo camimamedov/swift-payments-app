@@ -10,7 +10,6 @@ import SwiftUI
 struct LoadingView: View {
     
     @State private var isAnimate = false;
-    @State private var rotationDegree = 0;
     
     var body: some View {
         
