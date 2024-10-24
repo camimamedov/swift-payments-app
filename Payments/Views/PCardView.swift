@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct PCardView: View {
+    
+    var cardNumber: String
+    var validThru: String
+    var ownerName: String
+    var cardType: CardType
+    
     var body: some View {
         VStack{
             HStack(alignment: .top){
@@ -31,13 +37,10 @@ struct PCardView: View {
                     Spacer();
                 }
                 
-                Text("5355   0348   5945   5045")
+                Text(convertCardNumber(from: cardNumber))
                     .kerning(0.9)
                     .font(PFont.Mulish.SemiBold.size(18))
             }
-            
-            
-            
             
             HStack (alignment: .bottom){
                 VStack (alignment: .leading){
@@ -45,22 +48,23 @@ struct PCardView: View {
                         Text("VALID\nTHRU")
                             .font(PFont.Mulish.SemiBold.size(5))
                         
-                        Text("12/24")
+                        Text(validThru)
                             .font(PFont.Mulish.SemiBold.size(9))
                     }
                     .padding(.bottom, 15)
                     
-                    Text("MAMMADOV CAMI")
+                    Text(ownerName)
                         .font(PFont.Mulish.Bold.size(10))
                 }
 
                 Spacer()
                 
-                Image("mastercard")
+                Image(cardType == .MasterCard ? "mastercard" : "visa")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 42)
             }
+            
         }
         .padding(.horizontal, 22)
         .foregroundStyle(.white)
@@ -71,8 +75,21 @@ struct PCardView: View {
         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
         .shadow(radius: 10)
     }
+    
+    func convertCardNumber(from number: String) -> String{
+        
+        if number.count < 16
+        {
+            return "N/A"
+        }
+        else
+        {
+            return "\(number.substring(from: 0, to: 4))   \(number.substring(from: 4, to: 8))   \(number.substring(from: 8, to: 12))   \(number.substring(from: 12, to: 16))"
+        }
+    }
 }
 
 #Preview {
-    PCardView()
+    PCardView(cardNumber: "5355034859455045", validThru: "12/24",
+              ownerName: "MAMMADOV CAMI" , cardType: .MasterCard)
 }

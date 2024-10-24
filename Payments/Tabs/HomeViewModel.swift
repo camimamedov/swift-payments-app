@@ -15,7 +15,6 @@ import Foundation
         Task{
             do {
                 userData = try await NetworkManager.shared.getUserData()
-                print(userData)
             }
             catch{
                 if let error = error as? NetworkError{
