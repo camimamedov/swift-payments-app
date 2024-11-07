@@ -10,8 +10,9 @@ import SwiftUI
 
 enum PFont {
     enum Mulish: String{
-        case Bold = "Mulish-Bold"
+        case Regular = "Mulish-Regular"
         case SemiBold = "Mulish-SemiBold"
+        case Bold = "Mulish-Bold"
         
         func size(_ size: CGFloat) -> Font {
             return .custom(self.rawValue, size: size)

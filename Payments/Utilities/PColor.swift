@@ -9,6 +9,7 @@ import SwiftUI
 
 enum PColor: String {
     case primary = "PrimaryColor"
+    case black1 = "Black1"
 
     var color: Color {
         Color(self.rawValue)
