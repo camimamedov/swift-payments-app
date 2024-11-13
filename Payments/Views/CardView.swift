@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PCardView: View {
+struct CardView: View {
     
     var cardNumber: String
     var validThru: String
@@ -70,7 +70,7 @@ struct PCardView: View {
         .foregroundStyle(.white)
         .frame(width: 283, height: 176)
         .background {
-            LinearGradient(colors: [PColor.primary.color, .green], startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(colors: [PColor.primary.color, .cyan], startPoint: .topLeading, endPoint: .bottomTrailing)
         }
         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
         .shadow(radius: 10)
@@ -90,6 +90,6 @@ struct PCardView: View {
 }
 
 #Preview {
-    PCardView(cardNumber: "5355034859455045", validThru: "12/24",
+    CardView(cardNumber: "5355034859455045", validThru: "12/24",
               ownerName: "MAMMADOV CAMI" , cardType: .MasterCard)
 }

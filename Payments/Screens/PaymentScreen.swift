@@ -1,5 +1,5 @@
 //
-//  StatisticsView.swift
+//  PaymentView.swift
 //  Payments
 //
 //  Created by Cami Mamedov on 19.05.24.
@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct StatisticsView: View {
+struct PaymentScreen: View {
     var body: some View {
         ZStack{
-            Color(Color.brown)
+            Color(Color.green)
                 .ignoresSafeArea()
             VStack{
-                Text("StatisticsView")
+                Text("PaymentView")
             }
         }
     }
 }
 
 #Preview {
-    StatisticsView()
+    PaymentScreen()
 }

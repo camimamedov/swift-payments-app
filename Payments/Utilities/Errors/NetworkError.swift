@@ -7,9 +7,20 @@
 
 import Foundation
 
-enum NetworkError: String, Error
+enum NetworkError: CustomError
 {
-    case invalidUrl = "URL is invalid"
-    case noData = "Something went wrong"
-    case invalidData = "We get invalid data"
+    case invalidUrl
+    case invalidData
+    case noData
+    
+    var description: String {
+        switch self {
+        case .invalidUrl:
+            return "URL is invalid"
+        case .invalidData:
+            return "We get invalid data"
+        case .noData:
+            return "Something went wrong"
+        }
+    }
 }

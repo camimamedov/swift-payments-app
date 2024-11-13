@@ -21,18 +21,20 @@ struct PTabView: View {
     
     var body: some View {
         ZStack (alignment: .bottom) {
+            
             TabView (selection: $selectedTab) {
-                HomeView()
+                HomeScreen()
                     .tag(0)
-                StatisticsView()
+                StatisticsScreen()
                     .tag(1)
-                PaymentView()
+                PaymentScreen()
                     .tag(2)
-                CardsView()
+                CardsScreen()
                     .tag(3)
-                ProfileView()
+                ProfileScreen()
                     .tag(4)
             }
+            
             VStack{
                 Spacer()
                 HStack (alignment: .bottom) {
@@ -54,6 +56,7 @@ struct PTabView: View {
 
 #Preview {
     PTabView()
+        .environmentObject(CardService())
 }
 
 enum TabItems: Int, CaseIterable

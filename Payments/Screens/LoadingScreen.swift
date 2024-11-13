@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoadingView: View {
+struct LoadingScreen: View {
     
     @State private var isAnimate = false;
     
@@ -48,5 +48,5 @@ struct LoadingView: View {
 }
 
 #Preview {
-    LoadingView()
+    LoadingScreen()
 }
